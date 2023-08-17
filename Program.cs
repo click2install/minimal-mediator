@@ -21,5 +21,5 @@ builder.Services
 
 var app = builder.Build();
 app
-  .MediateGet<ExampleRequest>("/example/{name}")
+  .Mediate<ExampleRequest>(x => x.MapGet, "/example/{name}")
   .Run();
